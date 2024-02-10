@@ -38,65 +38,6 @@ function Light() {
       },
     },
   };
-  const eTwo = {
-    init: {
-      opacity: 0,
-      scale: 0.9,
-      strokeDashoffset: 0,
-    },
-    anime: {
-      scale: 1.1,
-      opacity: 1,
-      strokeDashoffset: 1000,
-      ease: "easeOut",
-      transition: {
-        strokeDashoffset: {
-          yoyo: Infinity,
-          duration: 3,
-        },
-        scale: {
-          yoyo: Infinity,
-          duration: 1,
-        },
-      },
-    },
-    exit: {
-      scale: 0,
-      transition: {
-        duration: 2,
-      },
-    },
-  };
-
-  const eThree = {
-    init: {
-      opacity: 0,
-      scale: 0.8,
-      strokeDashoffset: 0,
-    },
-    anime: {
-      strokeDashoffset: -2000,
-      scale: 1,
-      opacity: 1,
-      ease: "easeOut",
-      transition: {
-        strokeDashoffset: {
-          yoyo: Infinity,
-          duration: 3,
-        },
-        scale: {
-          yoyo: Infinity,
-          duration: 1,
-        },
-      },
-    },
-    exit: {
-      scale: 0,
-      transition: {
-        duration: 2,
-      },
-    },
-  };
 
   return (
     <motion.svg
