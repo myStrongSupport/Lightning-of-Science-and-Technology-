@@ -1,0 +1,119 @@
+.header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+nav {
+  padding: 45px 0;
+}
+
+/* Logo Navbar */
+
+.nav-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row-reverse;
+  cursor: pointer;
+}
+.nav-logo_img {
+  position: relative;
+  transition: 0.5s;
+  overflow: hidden;
+  width: 66px;
+  height: 66px;
+  display: grid;
+  place-content: center;
+  border-radius: 50%;
+  perspective: 100px;
+}
+.nav-logo img {
+  width: 70px;
+  transform-style: preserve-3d;
+  transform: rotateY(0) rotateX(0);
+  transition: all 0.5s ease-in;
+}
+
+.nav-logo:hover .nav-logo_img img {
+  transition: all 0.5s ease-in;
+  transform: rotateY(-28deg) rotateX(11deg);
+}
+
+.nav-logo_img::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0%;
+  transform: translate(100%, 100%);
+  background: linear-gradient(
+    141deg,
+    transparent,
+    transparent,
+    transparent,
+    rgba(255, 255, 255, 0.8),
+    transparent,
+    transparent
+  );
+  transition: all 0.5s ease-in;
+}
+
+.nav-logo:hover .nav-logo_img::before {
+  transform: translate(-100%, -100%);
+  transition: all 0.5s ease-in;
+}
+
+/* List */
+
+.nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  align-items: flex-start;
+}
+
+.nav-list_item {
+  margin-right: 100px;
+}
+
+.nav-list .nav-list_item a {
+  font-weight: 600;
+  cursor: pointer;
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-list_item span {
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.nav-list_item a:hover span {
+  transform: translateY(-100%);
+}
+
+.nav-list_item a::before {
+  content: attr(data-link-alt);
+  position: absolute;
+  top: 100%;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.nav-list_item a:hover::before {
+  opacity: 1;
+  transform: translateY(-100%);
+  color: #fedd5b;
+}

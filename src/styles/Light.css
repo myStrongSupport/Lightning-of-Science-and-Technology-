@@ -1,0 +1,13 @@
+.Light {
+  position: absolute;
+  width: 70%;
+  top: 70%;
+  transform: translateY(-50%);
+  height: 100%;
+}
+.eTwo {
+  stroke-dasharray: 2;
+}
+.eThree {
+  stroke-dasharray: 3;
+}
