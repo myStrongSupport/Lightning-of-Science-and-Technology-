@@ -42,6 +42,7 @@
   font-size: 2.5rem;
   color: var(--color-brand);
   background: -webkit-linear-gradient(#c15103, #fec301);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -71,33 +72,21 @@
   margin-top: 40px;
   border-radius: 50px;
   outline: none;
-  background: transparent;
+  background: #000;
   color: #fff;
   position: relative;
   display: grid;
   place-content: center;
   cursor: pointer;
+  border: none;
 }
 
-.btn-1 svg {
+.btn::before {
+  content: "";
   position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, #fec301, transparent);
   top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-
-.btn-1 svg rect {
-  fill: transparent;
-  stroke: #f26507;
-  stroke-width: 2px;
-  stroke-dashoffset: 72;
-  stroke-dasharray: 117, 57, 3, 0;
-  transition: stroke-dasharray 0.5s linear;
-}
-
-.btn-1:hover rect {
-  stroke-dashoffset: 0;
-  stroke-dasharray: 349, 59, 3, 0;
-  transition: all 0.5s linear;
+  border-radius: 50px;
 }

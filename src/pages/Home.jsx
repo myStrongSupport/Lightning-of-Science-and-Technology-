@@ -41,19 +41,7 @@ const Home = (props) => {
           متنوع با هدف بهبود ابزارهای کاربردی می باشد موجود در ارائه راهکارها
         </p>
         <div className="btn-home">
-          <button className="btn btn-1">
-            <svg width="100%" height="50px">
-              <rect
-                x="0"
-                y="0"
-                rx="30"
-                ry="30"
-                width="100%"
-                height="100%"
-              ></rect>
-            </svg>
-            ادامه
-          </button>
+          <button className="btn btn-1">ادامه</button>
         </div>
       </motion.div>
       <motion.div className="banner">
